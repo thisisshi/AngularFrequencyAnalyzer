@@ -28,7 +28,7 @@ cryptApp.controller('CryptCtrl', function ($scope){
 		for (var i = 0; i < $scope.cryptInput.length; i++) {
 
 			$scope.hash[$scope.cryptInput[i]]++;
-			$scope.percent[$scope.cryptInput[i]] =  $scope.hash[$scope.cryptInput[i]] / $scope.cryptInput.length;
+			$scope.percent[$scope.cryptInput[i]] =  ($scope.hash[$scope.cryptInput[i]] / $scope.cryptInput.length)*100;
 			if ($scope.max.value < $scope.hash[$scope.cryptInput[i]]){
 				$scope.max.character = $scope.cryptInput[i];
 				$scope.max.value = $scope.hash[$scope.cryptInput[i]]
